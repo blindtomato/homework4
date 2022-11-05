@@ -15,8 +15,7 @@ int[] fillArray(int lenght)
 
 void printArray(int[] array)
 {
-    int count = array.Length;
-    for(int i = 0; i < count; i++)
+    for(int i = 0; i < array.Length; i++)
     {
         Console.Write($"{array[i]} ");
     }
@@ -31,10 +30,7 @@ bool Is1MuchThan0(int[] array)
         if(array[i] == 1)
             count++;
     }
-    if(count > array.Length - count)
-        return true;
-    else
-        return false;
+    return count > array.Length - count;      
 }
 
 int[] newArray = fillArray(8);
